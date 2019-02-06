@@ -1,7 +1,7 @@
 var should = require('should'), 
     mongoose = require('mongoose'), 
-    Listing = require('./ListingSchema'), 
-    config = require('./config');
+    Listing = require('../models/listings.server.model'), 
+    config = require('../config/config');
 
 var listing, id;
 
@@ -32,7 +32,7 @@ describe('Listing Schema Unit Tests', function() {
     it('saves properly when code and name provided', function(done){
       new Listing({
         name: listing.name, 
-        code: listing.code,
+        code: listing.code
       }).save(function(err, listing){
         should.not.exist(err);
         id = listing._id;

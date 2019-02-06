@@ -5,7 +5,9 @@
 module.exports = {
   db: {
     uri: 'mongodb://student:123456@ds129442.mlab.com:29442/cen3031project', //place the URI of your mongo database here.
-  }
+  }, 
+  googleMaps: {
+    key: ''
+  },
+  port: 8080
 };
-
-/* Now go to the JSONtoMongo.js file and include this file as a variable named 'config' with a require() */
